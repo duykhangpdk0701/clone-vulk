@@ -1,1 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+.marquee-animation--parent {
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+}
+
+.marquee-animation {
+    display: block;
+
+    position: absolute;
+    overflow: hidden;
+
+    animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
