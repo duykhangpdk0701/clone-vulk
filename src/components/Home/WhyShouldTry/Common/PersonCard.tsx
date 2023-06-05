@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { Card } from "../../../Common";
+
 import Avatar from "../../../Common/Avatar";
+import { Card } from "@/components/Common/Card";
 
 interface IPersonCard {
     name: string;

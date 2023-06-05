@@ -1,4 +1,3 @@
-import React from "react";
 import ListBrand from "./ListBrand";
 
 const MentorSection = () => {
@@ -13,7 +12,7 @@ const MentorSection = () => {
                 </h2>
             </div>
 
-            <div>
+            <div className="max-w-[940px] mx-auto pt-12">
                 <ListBrand />
             </div>
         </section>

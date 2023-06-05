@@ -1,5 +1,4 @@
 import PersonCard from "./Common/PersonCard";
-import { ReactFragment } from "react";
 import Marquee from "react-fast-marquee";
 
 import Person1Img from "../../../assets/img/avatar/person1.jpg";
