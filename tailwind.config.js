@@ -9,6 +9,10 @@ export default {
         },
 
         colors: {
+            text: {
+                medium: "#747990",
+                light: "#a2a5b9",
+            },
             transparent: "transparent",
             primary: {
                 purple: "#7703fc",

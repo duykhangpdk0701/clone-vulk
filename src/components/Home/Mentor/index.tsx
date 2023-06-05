@@ -4,7 +4,7 @@ const MentorSection = () => {
     return (
         <section className="p-12 pb-40">
             <div className="text-center p-12">
-                <span className="text-xl leading-none">
+                <span className="text-xl leading-none font-bold text-gradient">
                     From the best companies
                 </span>
                 <h2 className="text-[32px] font-bold font-mono leading-tight">

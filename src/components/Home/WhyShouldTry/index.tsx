@@ -1,43 +1,14 @@
 import PersonCard from "./Common/PersonCard";
 import Marquee from "react-fast-marquee";
 
-import Person1Img from "../../../assets/img/avatar/person1.jpg";
-
-const data = [
-    {
-        name: "Nelly Olsen",
-        position: "Mike Williams Founder @Covenant",
-        desc: "Vulk has definitely made the management of our web advertising better. By combining the convenience of managing keywords and bids, along with being able to track our ongoing results, Vulk has given us more control over our web advertising than we’ve ever had before.",
-        imgUrl: Person1Img,
-    },
-
-    {
-        name: "Nelly Olsen",
-        position: "Mike Williams Founder @Covenant",
-        desc: "Vulk has definitely made the management of our web advertising better. By combining the convenience of managing keywords and bids, along with being able to track our ongoing results, Vulk has given us more control over our web advertising than we’ve ever had before.",
-        imgUrl: Person1Img,
-    },
-
-    {
-        name: "Nelly Olsen",
-        position: "Mike Williams Founder @Covenant",
-        desc: "Vulk has definitely made the management of our web advertising better. By combining the convenience of managing keywords and bids, along with being able to track our ongoing results, Vulk has given us more control over our web advertising than we’ve ever had before.",
-        imgUrl: Person1Img,
-    },
-
-    {
-        name: "Nelly Olsen",
-        position: "Mike Williams Founder @Covenant",
-        desc: "Vulk has definitely made the management of our web advertising better. By combining the convenience of managing keywords and bids, along with being able to track our ongoing results, Vulk has given us more control over our web advertising than we’ve ever had before.",
-        imgUrl: Person1Img,
-    },
-];
+import { Fragment } from "react";
+import dataPerson from "./dataPerson";
 
 const WhyShouldTrySection = () => {
     return (
         <section>
             <div className="text-center p-12">
-                <span className="text-xl leading-none">
+                <span className="text-xl font-bold leading-none text-gradient">
                     Why you should try our Optimization solution
                 </span>
                 <h2 className="text-[32px] font-bold font-mono leading-tight">
@@ -48,8 +19,8 @@ const WhyShouldTrySection = () => {
             <div>
                 <div>
                     <Marquee>
-                        {data.map((item, index) => (
-                            <>
+                        {dataPerson.map((item, index) => (
+                            <Fragment key={index}>
                                 <PersonCard
                                     name={item.name}
                                     desc={item.desc}
@@ -65,7 +36,7 @@ const WhyShouldTrySection = () => {
                                     key={index}
                                     imgUrl={item.imgUrl}
                                 />
-                            </>
+                            </Fragment>
                         ))}
                     </Marquee>
                 </div>

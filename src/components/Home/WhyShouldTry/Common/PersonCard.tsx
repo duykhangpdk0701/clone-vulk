@@ -22,12 +22,12 @@ const PersonCard: FC<IPersonCard> = (props) => {
                     <p className="text-[14.4px] font-semibold font-mono">
                         {name}
                     </p>
-                    <p className="text-[14.4px]">{posision}</p>
+                    <p className="text-[14.4px] text-text-light">{posision}</p>
                 </div>
             </div>
 
             <div>
-                <p className="text-[15.2px]">{desc}</p>
+                <p className="text-[15.2px] text-text-medium">{desc}</p>
             </div>
         </Card>
     );

@@ -1,76 +1,9 @@
-import asunaBrand from "@/assets/img/brand/asuna.svg";
-
-const data = [
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-    {
-        title: "asuna",
-        imgUrl: asunaBrand,
-    },
-];
+import dataBrand from "./dataBrand";
 
 const ListBrand = () => {
     return (
         <div className="flex flex-wrap">
-            {data.map((item, index) => (
+            {dataBrand.map((item, index) => (
                 <div className="w-1/5 p-3" key={index}>
                     <div className="min-h-[50px] flex justify-center items-center">
                         <img
