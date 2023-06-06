@@ -95,6 +95,7 @@
     transition: all 0.3s;
     font-size: 0.95rem;
     font-weight: 500;
+    padding-inline: 20px;
 
     color: rgb(40, 50, 82);
     border-color: rgb(229, 229, 229);

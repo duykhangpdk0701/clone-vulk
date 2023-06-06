@@ -1,7 +1,7 @@
 import ContentContainer from "./ContentContainer";
-import Image from "../../../assets/illustrations/creator-feature-1.png";
-import Imag2 from "../../../assets/illustrations/creator-feature-2.png";
-import Image3 from "../../../assets/illustrations/creator-feature-3.svg";
+import Image from "@/assets/illustrations/creator-feature-1.png";
+import Imag2 from "@/assets/illustrations/creator-feature-2.png";
+import Image3 from "@/assets/illustrations/creator-feature-3.svg";
 
 const Content = () => {
     return (

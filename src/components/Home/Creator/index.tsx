@@ -1,13 +1,13 @@
 import Avatar from "./Common/Avatar";
-import Person from "../../../assets/img/avatar/12.jpg";
-import Person2 from "../../../assets/img/avatar/14.jpg";
-import Person3 from "../../../assets/img/avatar/17.jpg";
-import Person4 from "../../../assets/img/avatar/19.jpg";
-import Person5 from "../../../assets/img/avatar/21.jpg";
+import Person from "@/assets/img/avatar/12.jpg";
+import Person2 from "@/assets/img/avatar/14.jpg";
+import Person3 from "@/assets/img/avatar/17.jpg";
+import Person4 from "@/assets/img/avatar/19.jpg";
+import Person5 from "@/assets/img/avatar/21.jpg";
 
 const Creator = () => {
     return (
-        <div className="bg-bg-section2">
+        <section className="bg-bg-section2">
             <div className="max-w-[1200px] mx-auto py-20">
                 <div className="text-center p-12">
                     <span className="text-xl font-bold leading-none text-gradient">
@@ -46,7 +46,7 @@ const Creator = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

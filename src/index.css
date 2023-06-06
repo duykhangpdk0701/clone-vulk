@@ -12,6 +12,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: BlinkMacSystemFont, -apple-system, Roboto, Oxygen, Ubuntu,
         Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial,

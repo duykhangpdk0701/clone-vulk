@@ -8,7 +8,7 @@ import {
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 import Logo from "../../assets/logo.svg";
-import Button from "../Common/Button";
+import ButtonBase from "@/components/Common/ButtonBase";
 
 const Footer = () => {
     return (
@@ -200,7 +200,7 @@ const Footer = () => {
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </span>
                         </div>
-                        <Button
+                        <ButtonBase
                             text={"Subcribe"}
                             className="px-4 py-2"
                             primary
