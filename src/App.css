@@ -42,3 +42,48 @@
 .action-link:hover {
     color: var(--primary);
 }
+
+.img-morph {
+    animation: morph 10s linear infinite;
+    border-radius: 30% 65% 65% 30% / 40% 50% 50% 40%;
+    transition: all 1s ease-in-out;
+    z-index: 5;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 30% 65% 65% 30% / 40% 50% 50% 40%;
+    }
+
+    15% {
+        border-radius: 30% 62% 62% 40% / 40% 47% 55% 45%;
+    }
+
+    25% {
+        border-radius: 30% 60% 60% 50% / 40% 45% 60% 50%;
+    }
+
+    40% {
+        border-radius: 30% 63% 63% 40% / 40% 47% 55% 45%;
+    }
+
+    50% {
+        border-radius: 30% 65% 65% 30% / 40% 50% 50% 40%;
+    }
+
+    65% {
+        border-radius: 45% 50% 45% 50% / 50% 40% 60% 40%;
+    }
+
+    75% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    85% {
+        border-radius: 45% 50% 50% 50% / 50% 40% 60% 40%;
+    }
+
+    100% {
+        border-radius: 30% 65% 65% 30% / 40% 50% 50% 40%;
+    }
+}
