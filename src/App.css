@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --text: rgb(40, 50, 82);
+    --link: rgb(119, 3, 252);
+    --primary: rgb(119, 3, 252);
+}
+
 .text-gradient {
     background: linear-gradient(
         45deg,
@@ -25,4 +31,14 @@
     100% {
         background-position: 200% center;
     }
+}
+
+.action-link {
+    font-weight: 500;
+    color: var(--link);
+    font-size: 1.15rem;
+}
+
+.action-link:hover {
+    color: var(--primary);
 }

@@ -5,13 +5,14 @@ export default {
         extend: {},
         fontFamily: {
             robo: ["Roboto", "sans-serif"],
-            mono: ["Roboto", "sans-serif"],
+            mono: ["Montserrat", "sans-serif"],
         },
 
         colors: {
             text: {
                 medium: "#747990",
                 light: "#a2a5b9",
+                link: "#7703fc",
             },
             transparent: "transparent",
             primary: {
