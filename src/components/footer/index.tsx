@@ -200,7 +200,11 @@ const Footer = () => {
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </span>
                         </div>
-                        <Button text={"Subcribe"} className="px-4 py-2" />
+                        <Button
+                            text={"Subcribe"}
+                            className="px-4 py-2"
+                            primary
+                        />
                     </div>
                 </div>
             </div>
