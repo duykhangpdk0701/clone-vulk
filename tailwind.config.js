@@ -14,6 +14,9 @@ export default {
                 light: "#a2a5b9",
                 link: "#7703fc",
             },
+            bg: {
+                primary: "#f5f6fa",
+            },
             transparent: "transparent",
             primary: {
                 purple: "#7703fc",
