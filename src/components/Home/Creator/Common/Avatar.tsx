@@ -29,7 +29,7 @@ const Avatar: React.FC<IAvatar> = ({ img, className }) => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </div>
             </div>
-            <div className="z-0 absolute rounded-full w-full h-full top-0 left-0 border-2 border-primary-purple scale-50 group-hover:scale-150 transition-all delay-75"></div>
+            <div className="hidden md:block z-0 absolute rounded-full w-full h-full top-0 left-0 border-2 border-primary-purple scale-50 group-hover:scale-150 transition-all delay-75"></div>
         </div>
     );
 };

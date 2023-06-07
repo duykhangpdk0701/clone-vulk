@@ -4,17 +4,19 @@ import Creator from "./components/Home/Creator";
 import Reasons from "./components/Home/Reasons";
 import Content from "./components/Home/Content";
 import BackToTop from "./components/BackToTop";
-import "./App.css";
 import HeroSection from "./components/Home/Hero";
 import TheToolSection from "./components/Home/Tool";
 import CommunitySection from "./components/Home/Community";
 import Footer from "@/components/footer";
 import ForYouSection from "./components/Home/ForYou";
+import Header from "./components/Header";
+import "./App.css";
 
 function App() {
     return (
         <>
             <BackToTop />
+            <Header />
             <main>
                 <HeroSection />
                 <TheToolSection />
