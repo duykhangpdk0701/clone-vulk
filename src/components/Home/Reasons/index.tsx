@@ -3,13 +3,14 @@ import ReasonContent from "./ReasonContent";
 import Img from "../../../assets/illustrations/creator-highlight-1.png";
 import Img2 from "../../../assets/illustrations/creator-highlight-2.png";
 import Img3 from "../../../assets/illustrations/creator-highlight-3.png";
+import { Button } from "@/components/Common";
 
 const Reasons = () => {
     const [show, setShow] = useState<string>("discussions");
 
     return (
-        <div className="max-w-[1200px] mx-auto py-20">
-            <div className="text-center p-12">
+        <div className="max-w-[1200px] min-h-[920px] md:min-h-[1100px] mx-auto py-20">
+            <div className="text-center md:p-12">
                 <span className="text-xl font-bold leading-none text-gradient">
                     Why you should try our Optimization solution
                 </span>
@@ -17,26 +18,11 @@ const Reasons = () => {
                     Three reasons you’ll love our solution
                 </h2>
             </div>
-            <div className="max-w-[780px] mx-auto">
-                <div className="flex justify-evenly mb-10">
-                    <button
-                        className="border-2 p-2"
-                        onClick={() => setShow("discussions")}
-                    >
-                        Discussions
-                    </button>
-                    <button
-                        className="border-2 p-2"
-                        onClick={() => setShow("privateSpaces")}
-                    >
-                        Private Spaces
-                    </button>
-                    <button
-                        className="border-2 p-2"
-                        onClick={() => setShow("persionalReports")}
-                    >
-                        Personal Reports
-                    </button>
+            <div className="max-w-[780px] mx-auto px-8">
+                <div className="flex flex-col md:flex-row items-center md:justify-evenly mb-6 mt-10 md:mt-0 min-h-[54px]">
+                    <Button className={`min-w-[200px] mb-4 border-2 ${show == "discussions" && 'border-primary-purple text-primary-purple'}`}  handleClick={() => setShow("discussions")}>Discussions</Button>
+                    <Button className={`min-w-[200px] mb-4 border-2 ${show == "privateSpaces" && 'border-primary-purple text-primary-purple'}`}  handleClick={() => setShow("privateSpaces")}>Private Spaces</Button>
+                    <Button className={`min-w-[200px] mb-4 border-2 ${show == "persionalReports" && 'border-primary-purple text-primary-purple'}`}  handleClick={() => setShow("persionalReports")}>Personal Reports</Button>
                 </div>
                 {show == "discussions" && (
                     <ReasonContent

@@ -7,7 +7,7 @@ const BackToTop = () => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     const onScroll = () => {
-        if (window.pageYOffset > 500) {
+        if (window.scrollY > 400) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
@@ -31,28 +31,25 @@ const BackToTop = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
-
-        //
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
     return (
         <div
             className={`bottom-10 right-10 h-12 w-12 text-primary-purple cursor-pointer animate-appear ${
-                isVisible ? "fixed" : "hidden"
+                isVisible ? "md:fixed" : "hidden"
             }`}
             onClick={scrollToTop}
         >
             <svg
                 fill="none"
-                data-v-c21e262c=""
                 className="progress-circle svg-content"
                 width="100%"
                 height="100%"
                 viewBox="-1 -1 102 102"
             >
                 <path
-                    data-v-c21e262c=""
                     stroke="#7703fc"
+                    stroke-width="4"
                     d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
                     style={{
                         transition: "stroke-dashoffset 10ms linear 0s;",

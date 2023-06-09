@@ -14,10 +14,10 @@ import face10Img from "@/assets/img/hero/10.jpg";
 
 const HeroSection = () => {
     return (
-        <section className="min-h-screen px-0 md:p-12 pb-8 bg-bg-primary">
+        <section className="min-h-screen px-0 md:p-12 pb-8 bg-bg-primary dark:bg-bg-dark-primary ">
             <div className="container mx-auto max-w-[1152px] mt-12 p-3">
                 <div className="max-w-[40rem] mx-auto text-center">
-                    <h1 className="text-[40px] font-bold font-mono leading-[1.125] mb-3">
+                    <h1 className="text-[40px] font-bold font-mono leading-[1.125] mb-3 dark:text-text-dark-title">
                         The Modern Community Platform For{" "}
                         <span className="text-primary-purple">Creators</span>
                     </h1>
