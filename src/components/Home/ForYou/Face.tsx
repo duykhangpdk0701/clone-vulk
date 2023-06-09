@@ -20,35 +20,35 @@ const Face = () => {
                 width={300}
                 height={400}
                 alt="person image"
-                className="-left-[120px] -top-[80px] w-[160px]"
+                className="hidden lg:block -left-[120px] -top-[80px] w-[160px]"
             />
             <FaceItem
                 imgUrl={face1Img}
                 width={300}
                 height={400}
                 alt="person image"
-                className="left-[100px] right-[100px] top-[20px] w-[140px]"
+                className="hidden md:block left-[-15px] lg:left-[100px] right-[100px] top-[20px] w-[140px] scale-75 lg:scale-1"
             />
             <FaceItem
                 imgUrl={face7Img}
                 width={300}
                 height={400}
                 alt="person image"
-                className="-left-[80px] top-[180px] w-[140px]"
+                className="hidden lg:block -left-[80px] top-[180px] w-[140px]"
             />
             <FaceItem
                 imgUrl={face9Img}
                 width={300}
                 height={400}
                 alt="person image"
-                className="left-[140px] top-[260px] w-[140px]"
+                className="hidden md:block left-[0px] lg:left-[140px] top-[260px] w-[140px] scale-75 lg:scale-1"
             />
             <FaceItem
                 imgUrl={face6Img}
                 width={300}
                 height={400}
                 alt="person image"
-                className="left-[20px] top-[450px] w-[130px]"
+                className="hidden md:block -left-[30px] lg:left-[20px] top-[450px] w-[130px] scale-75 lg:scale-1"
             />
             {/* right hafl */}
             <FaceItem
@@ -56,35 +56,35 @@ const Face = () => {
                 width={300}
                 height={400}
                 alt="person image"
-                className="-right-[120px] -top-[80px] w-[160px]"
+                className="hidden lg:block md:-right-[170px] lg:-right-[120px] -top-[80px] w-[160px]"
             />
             <FaceItem
                 imgUrl={face3Img}
                 width={300}
                 height={400}
                 alt="person image"
-                className="right-[100px] top-[20px] w-[140px]"
+                className="hidden md:block right-[-15px] lg:right-[100px] top-[20px] w-[140px] scale-75 lg:scale-1"
             />
             <FaceItem
                 imgUrl={face8Img}
                 width={300}
                 height={400}
                 alt="person image"
-                className="-right-[80px] top-[180px] w-[140px]"
+                className="hidden lg:block -right-[130px] lg:-right-[80px] top-[180px] w-[140px]"
             />
             <FaceItem
                 imgUrl={face5Img}
                 width={300}
                 height={400}
                 alt="person image"
-                className="right-[140px] top-[260px] w-[140px]"
+                className="hidden md:block right-[0px] lg:right-[140px] top-[260px] w-[140px] scale-75 lg:scale-1 "
             />
             <FaceItem
                 imgUrl={face10Img}
                 width={300}
                 height={400}
                 alt="person image"
-                className="right-[20px] top-[450px] w-[130px]"
+                className="hidden md:block -right-[30px] lg:right-[20px] top-[450px] w-[130px] scale-75 lg:scale-1"
             />
         </>
     );

@@ -3,7 +3,7 @@ import Face from "./Face";
 
 const ForYouSection = () => {
     return (
-        <section className="p-12 pb-[9.875rem] overflow-x-hidden">
+        <section className="py-12 px-6 pb-[9.875rem] overflow-x-hidden">
             <div>
                 <div className="cointainer max-w-[1152px] mx-auto">
                     <div className="py-12">

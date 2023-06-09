@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const BackToTop = () => {
     const [scrollTop, setScrollTop] = useState<number>(0);
@@ -24,10 +24,10 @@ const BackToTop = () => {
 
     const scrollToTop = () => {
         window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+            top: 0,
+            behavior: "smooth",
         });
-      };
+    };
 
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
@@ -36,7 +36,12 @@ const BackToTop = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
     return (
-        <div className={`bottom-10 right-10 h-12 w-12 text-primary-purple cursor-pointer animate-appear ${isVisible ? 'fixed' : 'hidden'}`} onClick={scrollToTop}>
+        <div
+            className={`bottom-10 right-10 h-12 w-12 text-primary-purple cursor-pointer animate-appear ${
+                isVisible ? "fixed" : "hidden"
+            }`}
+            onClick={scrollToTop}
+        >
             <svg
                 fill="none"
                 data-v-c21e262c=""

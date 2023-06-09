@@ -14,7 +14,7 @@ import face10Img from "@/assets/img/hero/10.jpg";
 
 const HeroSection = () => {
     return (
-        <section className="min-h-screen p-12 pb-8 bg-bg-primary">
+        <section className="min-h-screen px-0 md:p-12 pb-8 bg-bg-primary">
             <div className="container mx-auto max-w-[1152px] mt-12 p-3">
                 <div className="max-w-[40rem] mx-auto text-center">
                     <h1 className="text-[40px] font-bold font-mono leading-[1.125] mb-3">
@@ -35,20 +35,29 @@ const HeroSection = () => {
                 </div>
                 <div className="mt-4">
                     <div className="flex items-center">
-                        <div className="w-[16.6%] px-3">
-                            <FaceElement imgUrl={face8Img} />
+                        <div className="w-[16.6%] px-3 hidden md:block">
+                            <FaceElement
+                                imgUrl={face8Img}
+                                className="min-h-[280px]"
+                            />
                         </div>
 
-                        <div className="w-[16.6%] px-3">
-                            <FaceElement imgUrl={face1Img} className="mb-6" />
+                        <div className="w-[16.6%] px-3 hidden lg:block">
+                            <FaceElement
+                                imgUrl={face1Img}
+                                className="mb-6 min-h-[280px]"
+                            />
                             <FaceElement
                                 imgUrl={face4Img}
                                 className="min-h-[340px]"
                             />
                         </div>
 
-                        <div className="w-[33.2%] px-3">
-                            <FaceElement imgUrl={face2bImg} className="mb-6" />
+                        <div className="w-[50%] md:w-[33.2%] px-3">
+                            <FaceElement
+                                imgUrl={face2bImg}
+                                className="mb-6 min-h-[280px]"
+                            />
                             <div className="flex items-center">
                                 <div className="w-[66.4%] px-3">
                                     <FaceElement
@@ -65,20 +74,26 @@ const HeroSection = () => {
                             </div>
                         </div>
 
-                        <div className="w-[16.6%] px-3">
+                        <div className="w-[33.2%] lg:w-[16.6%] px-3 hidden md:block">
                             <FaceElement
                                 imgUrl={face9aImg}
                                 className="mb-6 min-h-[340px]"
                             />
-                            <FaceElement imgUrl={face3Img} />
+                            <FaceElement
+                                imgUrl={face3Img}
+                                className="min-h-[280px]"
+                            />
                         </div>
 
-                        <div className="w-[16.6%] px-3">
+                        <div className=" w-[50%] md:w-[16.6%] px-3">
                             <FaceElement
                                 imgUrl={face7Img}
                                 className="mb-6 min-h-[180px]"
                             />
-                            <FaceElement imgUrl={face10Img} />
+                            <FaceElement
+                                imgUrl={face10Img}
+                                className="min-h-[280px]"
+                            />
                         </div>
                     </div>
                 </div>
