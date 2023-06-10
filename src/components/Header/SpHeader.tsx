@@ -18,7 +18,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useStore } from "@/App";
 import { Button } from "../Common";
-import DropdownLeftContent from "./DropdownLeftContent";
 
 interface TabPanelProps {
     children?: React.ReactNode;
