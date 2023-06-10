@@ -42,7 +42,7 @@ function TabPanel(props: TabPanelProps) {
             {value > 0 ? (
                 <div className="flex justify-end h-[70px] items-center px-5">
                     <FontAwesomeIcon
-                        className="text-2xl cursor-pointer"
+                        className="text-2xl cursor-pointer dark:text-text-dark-title"
                         icon={faArrowLeft}
                         onClick={() => {
                             dispatch(setValueAction(0));
@@ -55,7 +55,7 @@ function TabPanel(props: TabPanelProps) {
 
                     <FontAwesomeIcon
                         icon={faXmark}
-                        className="text-2xl cursor-pointer"
+                        className="text-2xl cursor-pointer dark:text-text-dark-title"
                         onClick={() => dispatch(setCloseAction())}
                     />
                 </div>
@@ -79,7 +79,7 @@ const SpHeader = () => {
             onClose={() => dispatch(setCloseAction())}
             onOpen={() => dispatch(setOpenAction())}
         >
-            <div className="">
+            <div className="dark:bg-bg-dark-third">
                 <TabPanel value={value} index={0}>
                     <div className="flex flex-col justify-center items-center gap-6">
                         <div className="group relative">
@@ -88,22 +88,28 @@ const SpHeader = () => {
                                 onClick={() => dispatch(setValueAction(1))}
                             >
                                 <div className="group-hover:w-1/3 absolute w-0  top-0 left-0 h-1 rounded bg-primary-purple transition-all"></div>
-                                <span className="mr-2 font-semibold font-mono">
-                                    Pricing
+                                <span className="mr-2 font-semibold font-mono dark:text-text-dark-title">
+                                    Product
                                 </span>
                                 <span className="inline-block group-hover:-rotate-90 transition-all">
-                                    <FontAwesomeIcon icon={faChevronDown} />
+                                    <FontAwesomeIcon
+                                        className="dark:text-text-dark-title"
+                                        icon={faChevronDown}
+                                    />
                                 </span>
                             </div>
                         </div>
 
                         <div className="group relative">
-                            <div className="cursor-pointer h-full flex items-center group-hover:text-primary-purple">
+                            <a
+                                href="#"
+                                className="cursor-pointer h-full flex items-center group-hover:text-primary-purple"
+                            >
                                 <div className="group-hover:w-1/3 absolute w-0  top-0 left-0 h-1 rounded bg-primary-purple transition-all"></div>
-                                <span className="mr-2 font-semibold font-mono">
+                                <span className="mr-2 font-semibold font-mono dark:text-text-dark-title">
                                     Pricing
                                 </span>
-                            </div>
+                            </a>
                         </div>
 
                         <div className="group relative">
@@ -111,11 +117,14 @@ const SpHeader = () => {
                                 className="cursor-pointer h-full flex items-center group-hover:text-primary-purple"
                                 onClick={() => dispatch(setValueAction(2))}
                             >
-                                <span className="mr-2 font-semibold font-mono">
-                                    Pricing
+                                <span className="mr-2 font-semibold font-mono dark:text-text-dark-title">
+                                    Company
                                 </span>
                                 <span className="inline-block group-hover:-rotate-90 transition-all">
-                                    <FontAwesomeIcon icon={faChevronDown} />
+                                    <FontAwesomeIcon
+                                        icon={faChevronDown}
+                                        className="dark:text-text-dark-title"
+                                    />
                                 </span>
                                 <div className="group-hover:w-1/3 absolute w-0  top-0 left-0 h-1 rounded bg-primary-purple transition-all"></div>
                             </div>
@@ -126,11 +135,14 @@ const SpHeader = () => {
                                 className="cursor-pointer h-full flex items-center group-hover:text-primary-purple"
                                 onClick={() => dispatch(setValueAction(3))}
                             >
-                                <span className="mr-2 font-semibold font-mono">
-                                    Pricing
+                                <span className="mr-2 font-semibold font-mono dark:text-text-dark-title">
+                                    Resources
                                 </span>
                                 <span className="inline-block group-hover:-rotate-90 transition-all">
-                                    <FontAwesomeIcon icon={faChevronDown} />
+                                    <FontAwesomeIcon
+                                        icon={faChevronDown}
+                                        className="dark:text-text-dark-title"
+                                    />
                                 </span>
                                 <div className="group-hover:w-1/3 absolute w-0  top-0 left-0 h-1 rounded bg-primary-purple transition-all"></div>
                             </div>
@@ -169,12 +181,12 @@ const SpHeader = () => {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <h2 className="text-[25px] font-medium text-center mb-3">
-                        Resources
+                    <h2 className="text-[25px] font-medium text-center mb-3 dark:text-text-dark-title">
+                        Awesome Features
                     </h2>
                     <p className="text-center text-text-medium text-base mb-2 px-5">
-                        Read our latest in business news, ecommerce, and data
-                        trends. Explore our customer resources
+                        Vulk is a Vue 3 UI kit that makes it easy to build
+                        gorgeous interfaces.
                     </p>
                     <div className="mb-5 group/dropdown text-primary-purple flex items-center justify-center cursor-pointer font-medium text-base">
                         <a href="#" className="group mr-5">
@@ -185,7 +197,9 @@ const SpHeader = () => {
                         </span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
-                        <div className="font-medium">DEMOS</div>
+                        <div className="font-medium dark:text-text-dark-title">
+                            DEMOS
+                        </div>
 
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
@@ -195,60 +209,63 @@ const SpHeader = () => {
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                About page
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Pricing page
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Profile page
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                     </div>
 
                     <div className="mt-6 flex flex-col items-center mb-5 gap-1">
-                        <div className="font-medium">DEMOS</div>
+                        <div className="font-medium dark:text-text-dark-title">
+                            DEMOS
+                        </div>
 
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Blog page
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Auth page
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Layouts
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Components
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    <h2 className="text-[25px] font-medium text-center mb-3">
-                        Resources
+                    <h2 className="text-[25px] font-medium text-center mb-3 dark:text-text-dark-title">
+                        We build the future
                     </h2>
                     <p className="text-center text-text-medium text-base mb-2 px-5">
-                        Read our latest in business news, ecommerce, and data
-                        trends. Explore our customer resources
+                        We’re maximizing the potential of sellers and brand
+                        owners through the power of data, AI, and marketplace
+                        expertise
                     </p>
                     <div className="mb-5 group/dropdown text-primary-purple flex items-center justify-center cursor-pointer font-medium text-base">
                         <a href="#" className="group mr-5">
@@ -259,132 +276,140 @@ const SpHeader = () => {
                         </span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
-                        <div className="font-medium">DEMOS</div>
+                        <div className="font-medium dark:text-text-dark-title">
+                            WHO WE ARE
+                        </div>
 
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Meet the team
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Work with us
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Our values
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Hire us
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                     </div>
 
                     <div className="mt-6 flex flex-col items-center mb-5 gap-1">
-                        <div className="font-medium">DEMOS</div>
+                        <div className="font-medium dark:text-text-dark-title">
+                            REACH US
+                        </div>
 
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Contact
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Help Center
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Support
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Terms
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                    <h2 className="text-[25px] font-medium text-center mb-3">
+                    <h2 className="text-[25px] font-medium text-center mb-3 dark:text-text-dark-title">
                         Resources
                     </h2>
                     <p className="text-center text-text-medium text-base mb-2 px-5">
                         Read our latest in business news, ecommerce, and data
-                        trends. Explore our customer resources
+                        trends. Explore our customer resources.
                     </p>
                     <div className="mb-5 group/dropdown text-primary-purple flex items-center justify-center cursor-pointer font-medium text-base">
                         <a href="#" className="group mr-5">
-                            Theme colors overview
+                            Open component library
                         </a>
                         <span className="group-hover/dropdown:translate-x-2 transition-all duration-300">
                             <FontAwesomeIcon icon={faArrowRight} />
                         </span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
-                        <div className="font-medium">DEMOS</div>
+                        <div className="font-medium dark:text-text-dark-title">
+                            LEARN
+                        </div>
 
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Components
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Colors
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Colors
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Plugins
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                     </div>
 
                     <div className="mt-6 flex flex-col items-center mb-5 gap-1">
-                        <div className="font-medium">DEMOS</div>
+                        <div className="font-medium dark:text-text-dark-title">
+                            BLOCKS
+                        </div>
 
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Features
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Content
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Team
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
                         <div className="group/item relative mb-1 cursor-pointer w-fit">
                             <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all text-sm text-text-medium">
-                                Landing page
+                                Team
                             </div>
                             <div className="absolute top-1/4 left-0 h-0 group-hover/item:h-1/2 w-[3px] bg-primary-purple transition-all"></div>
                         </div>
