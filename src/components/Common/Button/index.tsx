@@ -13,7 +13,7 @@ export const Button: FC<IButton> = (props) => {
     return (
         <button
             className={`button ${
-                type == "primary" ? "button--primary" : ""
+                type == "primary" ? "button--primary " : "dark:bg-bg-dark-secondary dark:text-text-dark-title"
             } ${className}`}
             style={{ width: fullWidth ? "100%" : "initial" }}
             onClick={handleClick}

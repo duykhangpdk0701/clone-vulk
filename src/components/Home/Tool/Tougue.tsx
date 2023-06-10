@@ -14,7 +14,8 @@ const Tougue: FC<ITougue> = (props) => {
             width="853"
             height="639"
             viewBox="0 0 853 639"
-            fill="#f5f6fa"
+            fill="currentColor"
+            // fill={ localStorage.theme === "dark" ? '#0C0C18' :'#f5f6fa'}
             xmlns="http://www.w3.org/2000/svg"
         >
             <path

@@ -1,12 +1,13 @@
 import React from "react";
 
 interface IWave {
-    color: [string, string, string, string];
+    color: string[];
 }
 
 const Wave: React.FC<IWave> = ({ color }) => {
+
     return (
-        <div className="animated-waves">
+        <div className="animated-waves dark:bg-bg-dark-secondary">
             <svg
                 className="waves wave-footer-dark h-[120px] w-full"
                 xmlns="http://www.w3.org/2000/svg"

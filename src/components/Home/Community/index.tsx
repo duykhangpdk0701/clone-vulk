@@ -2,7 +2,7 @@ import ListCommunity from "./ListCommunity";
 
 const CommunitySection = () => {
     return (
-        <section className="p-12">
+        <section className="p-12 dark:text-text-dark-title">
             <div className="container max-w-[1152px] mx-auto">
                 <div className="text-center p-12">
                     <span className="text-xl leading-none font-bold text-gradient">

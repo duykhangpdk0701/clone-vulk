@@ -3,7 +3,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const DropdownRightContent = () => {
     return (
-        <div className="w-4/12 border-l-[1px] border-primary-border_button pl-10">
+        <div className="w-4/12 border-l-[1px] border-primary-border_button pl-10 dark:border-bg-dark-border">
             <div className="text-[25px] font-medium">Vulk documentation</div>
             <div className="text-text-medium my-5">
                 Learn more about how you can get the most from the Vulk

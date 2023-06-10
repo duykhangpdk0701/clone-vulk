@@ -30,7 +30,7 @@ const HeroSection = () => {
                         <Button type="primary" className="min-w-[140px]">
                             Free Trial
                         </Button>
-                        <Button className="min-w-[140px]">Learn More</Button>
+                        <Button className="min-w-[140px] dark:bg-bg-dark-card dark:border-bg-dark-border">Learn More</Button>
                     </div>
                 </div>
                 <div className="mt-4">

@@ -5,7 +5,7 @@ import Image3 from "@/assets/illustrations/creator-feature-3.svg";
 
 const Content = () => {
     return (
-        <section className="px-6 lg:px-12">
+        <section className="px-6 lg:px-12 dark:bg-bg-dark-secondary text-text-dark-title">
             <div className="max-w-[1200px] mx-auto">
                 <div className="mb-[100px]">
                     <ContentContainer

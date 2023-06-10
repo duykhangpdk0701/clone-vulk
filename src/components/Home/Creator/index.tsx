@@ -1,3 +1,4 @@
+import { useStore } from "@/App";
 import Avatar from "./Common/Avatar";
 import Person from "@/assets/img/avatar/12.jpg";
 import Person2 from "@/assets/img/avatar/14.jpg";
@@ -8,17 +9,25 @@ import { Button } from "@/components/Common";
 import Wave from "@/components/Common/Wave";
 
 const Creator = () => {
+    const { darkTheme } = useStore();
+    const waveColor = darkTheme
+        ? [
+              "rgba(12, 12, 24,0.8)",
+              "rgba(12, 12, 24,0.6)",
+              "rgba(12, 12, 24,0.4)",
+              "rgba(12, 12, 24,0.2)",
+          ]
+        : [
+              "rgba(245,246,250,0.8)",
+              "rgba(245,246,250,0.6)",
+              "rgba(245,246,250,0.4)",
+              "rgba(245,246,250,0.2)",
+          ];
+
     return (
         <section className="">
-            <Wave
-                color={[
-                    "rgba(245,246,250,0.8)",
-                    "rgba(245,246,250,0.6)",
-                    "rgba(245,246,250,0.4)",
-                    "rgba(245,246,250,0.2)",
-                ]}
-            />
-            <div className="bg-bg-section2">
+            <Wave color={waveColor} />
+            <div className="bg-bg-section2 dark:bg-bg-dark-primary dark:text-text-dark-title">
                 <div className="max-w-[1200px] mx-auto py-20 px-8 md:px-0">
                     <div className="text-center p-12">
                         <span className="text-xl font-bold leading-none text-gradient">

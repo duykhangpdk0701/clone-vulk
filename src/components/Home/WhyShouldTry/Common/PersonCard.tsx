@@ -14,7 +14,7 @@ const PersonCard: FC<IPersonCard> = (props) => {
     const { name, posision, desc, imgUrl } = props;
 
     return (
-        <Card className="p-8 w-[480px] min-w-[480px] my-6 mx-3">
+        <Card className="p-8 w-[480px] min-w-[480px] my-6 mx-3 dark:bg-bg-dark-card dark:border-bg-dark-border">
             {/* card head */}
             <div className="flex mb-4">
                 <Avatar src={imgUrl} alt={name} />

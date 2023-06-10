@@ -2,7 +2,7 @@ import ListBrand from "./ListBrand";
 
 const MentorSection = () => {
     return (
-        <section className="p-12 pb-40">
+        <section className="p-12 pb-40 dark:text-text-dark-title">
             <div className="text-center p-12">
                 <span className="text-xl leading-none font-bold text-gradient">
                     From the best companies

@@ -3,10 +3,10 @@ import Tougue from "./Tougue";
 
 const TheToolSection = () => {
     return (
-        <section className="relative px-5 md:p-12">
-            <Tougue className="absolute -z-10 right-0 top-[75px] w-[720px] h-[539px]" />
+        <section className="relative px-5 md:p-12 dark:text-text-dark-title">
+            <Tougue className="absolute right-0 top-[75px] w-[720px] h-[539px] z-0 fill-bg-primary dark:fill-bg-dark-primary" />
 
-            <div className="container max-w-[1152px] mx-auto">
+            <div className="container relative max-w-[1152px] mx-auto z-10">
                 <div className="py-6">
                     <div className="flex flex-col lg:flex-row items-center">
                         <div className="w-full lg:w-2/4 p-3">

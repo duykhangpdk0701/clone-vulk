@@ -7,7 +7,7 @@ import dataPerson from "./dataPerson";
 const WhyShouldTrySection = () => {
     return (
         <section>
-            <div className="text-center p-12">
+            <div className="text-center p-12 dark:text-text-dark-title">
                 <span className="text-xl font-bold leading-none text-gradient">
                     Why you should try our Optimization solution
                 </span>

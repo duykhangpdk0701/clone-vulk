@@ -24,7 +24,13 @@ export default {
                 section: "#fff",
                 section2: "#f5f6fa",
                 switch: "#ededed",
-                dark: { primary: "#0C0C18" },
+                dark: {
+                    primary: "#0C0C18",
+                    secondary: "#0f0f1f",
+                    third: "#0a0a14",
+                    card: "#18182f",
+                    border: '#222244',
+                },
             },
             transparent: "transparent",
             primary: {

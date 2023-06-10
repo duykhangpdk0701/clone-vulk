@@ -4,7 +4,7 @@ import Image from "../../assets/img/nav-tile.jpeg";
 
 const DropdownRightContentImage = () => {
     return (
-        <div className="w-4/12 border-l-[1px] border-primary-border_button pl-10 z-40">
+        <div className="w-4/12 border-l-[1px] border-primary-border_button pl-10 z-40 dark:border-bg-dark-border">
             <div className="relative">
                 <img
                     src={Image}

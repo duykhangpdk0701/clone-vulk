@@ -23,7 +23,7 @@ const DropdownLeftContent: React.FC<IDropdownLeftContent> = ({
     itemArray2,
 }) => {
     return (
-        <div className="w-8/12 flex">
+        <div className="w-8/12 flex text-[16px]">
             <div className="w-6/12 pr-10">
                 {" "}
                 <div className="text-[25px] font-medium">{title}</div>
@@ -45,7 +45,7 @@ const DropdownLeftContent: React.FC<IDropdownLeftContent> = ({
                 <div className="w-6/12 text-text-medium">
                     {itemArray1.map((item) => {
                         return (
-                            <div className="group/item relative mb-1">
+                            <div className="group/item relative mb-1 cursor-pointer">
                                 <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all">
                                     {item}
                                 </div>
@@ -57,7 +57,7 @@ const DropdownLeftContent: React.FC<IDropdownLeftContent> = ({
                 <div className="w-6/12 text-text-medium">
                     {itemArray2.map((item) => {
                         return (
-                            <div className="group/item relative mb-1">
+                            <div className="group/item relative mb-1 cursor-pointer">
                                 <div className="group-hover/item:text-primary-purple group-hover/item:translate-x-[10px] transition-all">
                                     {item}
                                 </div>

@@ -7,9 +7,10 @@ import Logo from "../../assets/logo.svg";
 import DropdownLeftContent from "./DropdownLeftContent";
 import DropdownRightContent from "./DropdownRightContent";
 import DropdownRightContentImage from "./DropdownRightContentImage";
+import { useStore } from "@/App";
 
 const Header = () => {
-    const [darkTheme, setDarkTheme] = useState<boolean>(true);
+    const {darkTheme, handleOnChagneTheme} = useStore();
     const [fixedHeader, setFixedHeader] = useState<boolean>(false);
 
     const onScroll = () => {
@@ -20,41 +21,17 @@ const Header = () => {
         }
     };
 
-    const handleOnChagneTheme = () => {
-        setDarkTheme((pre) => {
-            if (!pre) {
-                localStorage.theme = "dark";
-            } else {
-                localStorage.theme = "light";
-            }
-            return !pre;
-        });
-    };
 
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    useEffect(() => {
-        if (
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-            document.documentElement.classList.add("dark");
-            setDarkTheme(true);
-        } else {
-            setDarkTheme(false);
-            document.documentElement.classList.remove("dark");
-        }
-    }, [darkTheme]);
-
     return (
         <div
             className={`fixed ${
                 fixedHeader ? "bg-bg-section shadow-xl" : "bg-transparent"
-            } left-0 w-screen top-0 bg-section z-50 overflow-x-hidden transition-all`}
+            } dark:text-text-light dark:bg-bg-dark-third left-0 w-screen top-0 bg-section z-50 overflow-x-hidden transition-all border-b-[1px] border-primary-border_button dark:border-bg-dark-border`}
         >
             <div className="hidden md:flex max-w-[1200px] mx-auto justify-between items-center h-[80px]">
                 <div className="flex justify-between items-center w-5/12 h-full">
@@ -69,7 +46,7 @@ const Header = () => {
                             </span>
                         </div>
                         <div className="group-hover:w-1/3 absolute w-0 top-5 left-0 h-1 rounded bg-primary-purple transition-all"></div>
-                        <div className="hidden group-hover:block bg-bg-section fixed left-0 top-[80px] w-full shadow-xl border-t-[1px] border-primary-border_button animate-appear">
+                        <div className="dark:bg-bg-dark-third hidden group-hover:block bg-bg-section fixed left-0 top-[81px] w-full shadow-xl animate-appear">
                             <div className="max-w-[1200px] mx-auto flex justify-between items-center pt-10 pb-20 text-[18px]">
                                 <DropdownLeftContent
                                     title="Awesome Features"
@@ -111,7 +88,7 @@ const Header = () => {
                             </span>
                         </div>
                         <div className="group-hover:w-1/3 absolute w-0  top-5 left-0 h-1 rounded bg-primary-purple transition-all"></div>
-                        <div className="hidden group-hover:block bg-bg-section fixed left-0 top-[80px] w-full shadow-xl border-t-[1px] border-primary-border_button animate-appear">
+                        <div className="dark:bg-bg-dark-third hidden group-hover:block bg-bg-section fixed left-0 top-[81px] w-full shadow-xl animate-appear">
                             <div className="max-w-[1200px] mx-auto flex justify-between items-center pt-10 pb-20 text-[18px]">
                                 <DropdownLeftContent
                                     title="We build the future"
@@ -146,7 +123,7 @@ const Header = () => {
                             </span>
                         </div>
                         <div className="group-hover:w-1/3 absolute w-0  top-5 left-0 h-1 rounded bg-primary-purple transition-all"></div>
-                        <div className="hidden group-hover:block bg-bg-section fixed left-0 top-[80px] w-full shadow-xl border-t-[1px] border-primary-border_button animate-appear">
+                        <div className="dark:bg-bg-dark-third hidden group-hover:block bg-bg-section fixed left-0 top-[81px] w-full shadow-xl animate-appear">
                             <div className="max-w-[1200px] mx-auto flex justify-between items-center pt-10 pb-20 text-[18px]">
                                 <DropdownLeftContent
                                     title="Resources"

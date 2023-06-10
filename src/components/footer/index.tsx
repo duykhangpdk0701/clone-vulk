@@ -10,19 +10,28 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import Logo from "../../assets/logo.svg";
 import Wave from "@/components/Common/Wave";
 import { Button } from "../Common";
+import { useStore } from "@/App";
 
 const Footer = () => {
+    const { darkTheme } = useStore();
+    const waveColor = darkTheme
+        ? [
+              "rgba(12, 12, 24,0.8)",
+              "rgba(12, 12, 24,0.6)",
+              "rgba(12, 12, 24,0.4)",
+              "rgba(12, 12, 24,0.2)",
+          ]
+        : [
+              "rgba(37,46,60,0.8)",
+              "rgba(37,46,60,0.6)",
+              "rgba(37,46,60,0.4)",
+              "rgba(37,46,60,0.2)",
+          ];
+
     return (
         <footer className="overflow-hidden w-screen">
-            <Wave
-                color={[
-                    "rgba(37,46,60,0.8)",
-                    "rgba(37,46,60,0.6)",
-                    "rgba(37,46,60,0.4)",
-                    "rgba(37,46,60,0.2)",
-                ]}
-            />
-            <div className="bg-primary-bg_light_footer">
+            <Wave color={waveColor} />
+            <div className="bg-primary-bg_light_footer dark:bg-bg-dark-third">
                 <div className="max-w-[1200px] mx-auto text-primary-white py-20">
                     <div className="flex flex-wrap pb-20 text-center md:text-left">
                         <div className="w-4/12 md:w-1/5">
