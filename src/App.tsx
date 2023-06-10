@@ -12,9 +12,12 @@ import Footer from "@/components/footer";
 import ForYouSection from "./components/Home/ForYou";
 import Header from "./components/Header";
 import "./App.css";
+import { Provider } from "react-redux";
+import { store } from "./context/store";
+import SpHeader from "./components/Header/SpHeader";
 
 interface IContext {
-    darkTheme:boolean;
+    darkTheme: boolean;
     setDarkTheme?: React.Dispatch<React.SetStateAction<boolean>>;
     handleOnChagneTheme?: () => void;
 }
@@ -44,7 +47,7 @@ function App() {
     const setting = {
         darkTheme,
         setDarkTheme,
-        handleOnChagneTheme
+        handleOnChagneTheme,
     };
 
     useEffect(() => {
@@ -62,23 +65,26 @@ function App() {
     }, [darkTheme]);
 
     return (
-        <Context.Provider value={setting}>
-            <BackToTop />
-            <Header />
-            <main className="dark:bg-bg-dark-secondary">
-                <HeroSection />
-                <TheToolSection />
-                <CommunitySection />
-                <ForYouSection />
-                <Creator />
-                <Reasons />
-                <Content />
-                <WhyShouldTrySection />
-                <MentorSection />
-            </main>
+        <Provider store={store}>
+            <Context.Provider value={setting}>
+                <BackToTop />
+                <Header />
+                <SpHeader />
+                <main className="dark:bg-bg-dark-secondary">
+                    <HeroSection />
+                    <TheToolSection />
+                    <CommunitySection />
+                    <ForYouSection />
+                    <Creator />
+                    <Reasons />
+                    <Content />
+                    <WhyShouldTrySection />
+                    <MentorSection />
+                </main>
 
-            <Footer />
-        </Context.Provider>
+                <Footer />
+            </Context.Provider>
+        </Provider>
     );
 }
 

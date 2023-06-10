@@ -8,10 +8,14 @@ import DropdownLeftContent from "./DropdownLeftContent";
 import DropdownRightContent from "./DropdownRightContent";
 import DropdownRightContentImage from "./DropdownRightContentImage";
 import { useStore } from "@/App";
+import { useAppDispatch, useAppSelector } from "../hook/redux";
+import { setCloseAction, setOpenAction } from "@/context/slice/menuSlice";
 
 const Header = () => {
-    const {darkTheme, handleOnChagneTheme} = useStore();
+    const { darkTheme, handleOnChagneTheme } = useStore();
     const [fixedHeader, setFixedHeader] = useState<boolean>(false);
+    const isMenuOpen = useAppSelector((state) => state.menu.isOpen);
+    const dispatch = useAppDispatch();
 
     const onScroll = () => {
         if (window.scrollY > 100) {
@@ -20,7 +24,6 @@ const Header = () => {
             setFixedHeader(false);
         }
     };
-
 
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
@@ -181,7 +184,16 @@ const Header = () => {
             {/* Mobile */}
             <div className="md:hidden flex justify-between items-center h-[80px] px-8">
                 <img src={Logo} alt="" className="h-10 w-10 " />
-                <FontAwesomeIcon icon={faBars} />
+                <FontAwesomeIcon
+                    className="cursor-pointer"
+                    icon={faBars}
+                    onClick={() => {
+                        console.log("hello my name is Khang");
+                        dispatch(
+                            isMenuOpen ? setCloseAction() : setOpenAction()
+                        );
+                    }}
+                />
             </div>
         </div>
     );
