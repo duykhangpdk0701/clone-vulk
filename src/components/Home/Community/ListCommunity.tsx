@@ -6,7 +6,7 @@ const ListCommunity = () => {
         <div className="flex flex-wrap">
             {communityData.map((item) => (
                 <dl className="p-3 w-full md:w-2/4 lg:w-1/4">
-                    <div className="py-4">
+                    <div className="py-0 md:py-4">
                         <div
                             className="w-8 h-8 mb-3 flex justify-center items-center rounded-lg"
                             style={{ backgroundColor: item.iconBgColor }}

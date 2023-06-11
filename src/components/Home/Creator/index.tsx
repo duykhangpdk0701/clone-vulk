@@ -28,8 +28,8 @@ const Creator = () => {
         <section className="">
             <Wave color={waveColor} />
             <div className="bg-bg-section2 dark:bg-bg-dark-primary dark:text-text-dark-title">
-                <div className="max-w-[1200px] mx-auto py-20 px-8 md:px-0">
-                    <div className="text-center p-12">
+                <div className="max-w-[1200px] mx-auto py-5 md:py-20 px-8 md:px-0">
+                    <div className="text-center pb-12 md:p-12">
                         <span className="text-xl font-bold leading-none text-gradient">
                             Meet our Creators
                         </span>

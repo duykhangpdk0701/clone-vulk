@@ -30,7 +30,9 @@ const HeroSection = () => {
                         <Button type="primary" className="min-w-[140px]">
                             Free Trial
                         </Button>
-                        <Button className="min-w-[140px] dark:bg-bg-dark-card dark:border-bg-dark-border">Learn More</Button>
+                        <Button className="min-w-[140px] dark:bg-bg-dark-card dark:border-bg-dark-border">
+                            Learn More
+                        </Button>
                     </div>
                 </div>
                 <div className="mt-4">
@@ -59,13 +61,13 @@ const HeroSection = () => {
                                 className="mb-6 min-h-[280px]"
                             />
                             <div className="flex items-center">
-                                <div className="w-[66.4%] px-3">
+                                <div className="w-full sm:w-[66.4%] px-3">
                                     <FaceElement
                                         imgUrl={face11Img}
                                         className="min-h-[180px]"
                                     />
                                 </div>
-                                <div className="w-[33.2%] px-3">
+                                <div className="hidden sm:block w-[33.2%] px-3">
                                     <FaceElement
                                         imgUrl={face5Img}
                                         className="min-h-[100px]"

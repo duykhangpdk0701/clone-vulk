@@ -70,7 +70,7 @@ function App() {
                 <BackToTop />
                 <Header />
                 <SpHeader />
-                <main className="dark:bg-bg-dark-secondary">
+                <main className="dark:bg-bg-dark-secondary mt-[80px] md:mt-0">
                     <HeroSection />
                     <TheToolSection />
                     <CommunitySection />

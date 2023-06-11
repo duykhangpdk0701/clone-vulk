@@ -36,8 +36,8 @@ const Header = () => {
                 fixedHeader ? "bg-bg-section shadow-xl" : "bg-transparent"
             } dark:text-text-light dark:bg-bg-dark-third left-0 w-screen top-0 bg-section z-50 overflow-x-hidden transition-all border-b-[1px] border-primary-border_button dark:border-bg-dark-border`}
         >
-            <div className="hidden md:flex max-w-[1200px] mx-auto justify-between items-center h-[80px]">
-                <div className="flex justify-between items-center w-5/12 h-full">
+            <div className="hidden md:flex max-w-[1240px] px-5 mx-auto justify-between items-center h-[80px]">
+                <div className="flex justify-between gap-5 items-center w-5/12 h-full">
                     <img src={Logo} alt="" className="h-10 w-10 " />
                     <div className="group relative h-full">
                         <div className="cursor-pointer h-full flex items-center group-hover:text-primary-purple">

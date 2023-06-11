@@ -15,7 +15,7 @@ const Reasons = () => {
                     <span className="text-xl font-bold leading-none text-gradient">
                         Why you should try our Optimization solution
                     </span>
-                    <h2 className="text-[32px] font-bold font-mono leading-tight">
+                    <h2 className="text-[32px] font-bold font-mono leading-tight text-primary-bg_light_footer dark:text-text-dark-title">
                         Three reasons you’ll love our solution
                     </h2>
                 </div>
@@ -23,8 +23,9 @@ const Reasons = () => {
                     <div className="flex flex-col md:flex-row items-center md:justify-evenly mb-6 mt-10 md:mt-0 min-h-[54px]">
                         <Button
                             className={`min-w-[200px] mb-4 border-2 ${
-                                show == "discussions" ?
-                                "border-primary-purple text-primary-purple" : 'dark:border-bg-dark-border'
+                                show == "discussions"
+                                    ? "border-primary-purple text-primary-purple"
+                                    : "dark:border-bg-dark-border"
                             }`}
                             handleClick={() => setShow("discussions")}
                         >
@@ -32,8 +33,9 @@ const Reasons = () => {
                         </Button>
                         <Button
                             className={`min-w-[200px] mb-4 border-2 ${
-                                show == "privateSpaces" ?
-                                "border-primary-purple text-primary-purple" : 'dark:border-bg-dark-border'
+                                show == "privateSpaces"
+                                    ? "border-primary-purple text-primary-purple"
+                                    : "dark:border-bg-dark-border"
                             }`}
                             handleClick={() => setShow("privateSpaces")}
                         >
@@ -41,8 +43,9 @@ const Reasons = () => {
                         </Button>
                         <Button
                             className={`min-w-[200px] mb-4 border-2 ${
-                                show == "persionalReports" ?
-                                "border-primary-purple text-primary-purple" : 'dark:border-bg-dark-border'
+                                show == "persionalReports"
+                                    ? "border-primary-purple text-primary-purple"
+                                    : "dark:border-bg-dark-border"
                             }`}
                             handleClick={() => setShow("persionalReports")}
                         >

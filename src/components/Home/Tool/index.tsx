@@ -3,7 +3,7 @@ import Tougue from "./Tougue";
 
 const TheToolSection = () => {
     return (
-        <section className="relative px-5 md:p-12 dark:text-text-dark-title">
+        <section className="relative px-0 md:px-5 md:p-12 dark:text-text-dark-title">
             <Tougue className="absolute right-0 top-[75px] w-[720px] h-[539px] z-0 fill-bg-primary dark:fill-bg-dark-primary" />
 
             <div className="container relative max-w-[1152px] mx-auto z-10">
