@@ -2,8 +2,8 @@ import ListBrand from "./ListBrand";
 
 const MentorSection = () => {
     return (
-        <section className="p-12 pb-40 dark:text-text-dark-title">
-            <div className="text-center p-12">
+        <section className="px-5 py-12  md:p-12 pb-40 dark:text-text-dark-title">
+            <div className="text-center px-5 py-12  md:p-12">
                 <span className="text-xl leading-none font-bold text-gradient">
                     From the best companies
                 </span>
@@ -12,7 +12,7 @@ const MentorSection = () => {
                 </h2>
             </div>
 
-            <div className="max-w-[940px] mx-auto pt-12">
+            <div className="max-w-[940px] mx-auto md:pt-12">
                 <ListBrand />
             </div>
         </section>

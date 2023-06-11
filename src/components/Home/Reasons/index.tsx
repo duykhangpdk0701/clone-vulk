@@ -19,7 +19,7 @@ const Reasons = () => {
                         Three reasons you’ll love our solution
                     </h2>
                 </div>
-                <div className="max-w-[780px] mx-auto px-8">
+                <div className="max-w-[780px] mx-auto px-5 md:px-8">
                     <div className="flex flex-col md:flex-row items-center md:justify-evenly mb-6 mt-10 md:mt-0 min-h-[54px]">
                         <Button
                             className={`min-w-[200px] mb-4 border-2 ${

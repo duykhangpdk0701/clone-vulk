@@ -23,13 +23,13 @@ const ContentContainer: React.FC<IContentContainer> = ({
 }) => {
     return (
         <div
-            className={`px-8 flex flex-col items-center justify-between ${
+            className={`px-0 md:px-8 flex flex-col items-center justify-between  ${
                 imageRight ? "md:flex-row-reverse" : "md:flex-row"
             }`}
         >
             <div className="md:w-5/12">
                 <div className="text-gradient font-bold mb-2">{subTitle}</div>
-                <div className="font-mono font-bold text-[32px] leading-[36px] md:text-[40px] md:leading-[45px] mb-6">
+                <div className="font-mono font-bold text-[32px] leading-[36px] dark:text-text-dark-title text-primary-bg_light_footer md:text-[40px] md:leading-[45px] mb-6">
                     {title}
                 </div>
                 <div className="text-[18px] leading-[28px] mb-5 text-text-medium">

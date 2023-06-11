@@ -19,7 +19,7 @@ const PersonCard: FC<IPersonCard> = (props) => {
             <div className="flex mb-4">
                 <Avatar src={imgUrl} alt={name} />
                 <div className="ml-3">
-                    <p className="text-[14.4px] font-semibold font-mono">
+                    <p className="text-[14.4px] font-semibold font-mono dark:text-text-dark-title">
                         {name}
                     </p>
                     <p className="text-[14.4px] text-text-light">{posision}</p>

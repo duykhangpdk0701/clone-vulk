@@ -175,7 +175,7 @@ const Footer = () => {
                                 alt=""
                                 className="w-11 h-11 mx-auto md:ml-0"
                             />
-                            <p className="my-4">
+                            <p className="my-4 px-5">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Negare non possum. Apparet
                                 statim, quae sint officia, quae actiones.

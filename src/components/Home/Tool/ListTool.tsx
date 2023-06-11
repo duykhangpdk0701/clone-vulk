@@ -6,7 +6,7 @@ const ListTool = () => {
     return (
         <div className="flex flex-wrap">
             {toolData.map((item) => (
-                <div className="w-full md:w-2/4 p-2 md:p-3">
+                <div className="w-full md:w-2/4 px-0 py-2 md:p-3">
                     <div className="py-2">
                         <h3 className="font-semibold mb-2 font-base font-mono">
                             {item.title}

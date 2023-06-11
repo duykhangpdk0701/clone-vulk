@@ -3,12 +3,12 @@ import Face from "./Face";
 
 const ForYouSection = () => {
     return (
-        <section className="py-12 px-6 md:pb-[9.875rem] overflow-x-hidden dark:text-text-dark-title">
+        <section className="py-12 px-5 md:px-6  md:pb-[9.875rem] overflow-x-hidden dark:text-text-dark-title">
             <div>
                 <div className="cointainer max-w-[1152px] mx-auto">
                     <div className="py-0 md:py-12">
                         <div className="relative">
-                            <div className="max-w-[27.5rem] mx-auto px-4 text-center">
+                            <div className="max-w-[27.5rem] mx-auto md:px-4 text-center">
                                 <h2 className="text-[32px] font-mono font-bold leading-[1.125] mb-6">
                                     The Tool made for creators like you
                                 </h2>

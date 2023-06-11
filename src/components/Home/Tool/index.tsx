@@ -9,7 +9,7 @@ const TheToolSection = () => {
             <div className="container relative max-w-[1152px] mx-auto z-10">
                 <div className="py-6">
                     <div className="flex flex-col lg:flex-row items-center">
-                        <div className="w-full lg:w-2/4 p-3">
+                        <div className="w-full lg:w-2/4 p-5">
                             <div className="max-w-full lg:max-w-[480px] mx-auto">
                                 <iframe
                                     className="mx-auto w-full"
@@ -23,7 +23,7 @@ const TheToolSection = () => {
                             </div>
                         </div>
 
-                        <div className="w-full lg:w-2/4 p-3">
+                        <div className="w-full lg:w-2/4 p-5">
                             <h2 className="text-[32px] font-bold font-mono">
                                 The Tool for Creators
                             </h2>

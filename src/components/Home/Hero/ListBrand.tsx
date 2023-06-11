@@ -6,25 +6,33 @@ import infiniteBrand from "@/assets/img/brand/infinite.svg";
 
 const ListBrand = () => {
     return (
-        <div className="max-w-[840px] mx-auto">
+        <div className="max-w-[840px] mx-auto mt-10">
             <p className="text-text-light text-base leading-normal text-center">
                 Helping creators work faster at
             </p>
-            <div className="mb-12">
-                <ul className="flex justify-center items-center">
+            <div className="mb-12 overflow-x-auto">
+                <ul className="flex justify-center items-center w-[840px]">
                     <li className="px-4">
-                        <img src={asunaBrand} alt="asuna" className="w-28" />
+                        <img
+                            src={asunaBrand}
+                            alt="asuna"
+                            className="w-28 dark:invert"
+                        />
                     </li>
 
                     <li className="px-4">
-                        <img src={vonmoBrand} alt="vonmo" className="w-28" />
+                        <img
+                            src={vonmoBrand}
+                            alt="vonmo"
+                            className="w-28 dark:invert"
+                        />
                     </li>
 
                     <li className="px-4">
                         <img
                             src={covenantBrand}
                             alt="covenant"
-                            className="w-28"
+                            className="w-28 dark:invert"
                         />
                     </li>
 
@@ -32,7 +40,7 @@ const ListBrand = () => {
                         <img
                             src={grubspotBrand}
                             alt="grubpot"
-                            className="w-28"
+                            className="w-28 dark:invert"
                         />
                     </li>
 
@@ -40,7 +48,7 @@ const ListBrand = () => {
                         <img
                             src={infiniteBrand}
                             alt="infinite"
-                            className="w-28"
+                            className="w-28 dark:invert"
                         />
                     </li>
                 </ul>
